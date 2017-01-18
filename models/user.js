@@ -8,6 +8,8 @@ var passportLocalMongoose = require('passport-local-mongoose');
 var User = new Schema({
     username: String,
     password: String,
+    OauthId: String,
+    OauthToken: String, //These two will keep track of the authorization ID and Auth token which are gonna get obtained when the user authenticates with facebook
     firstname: {
         type: String,
         default: ''
